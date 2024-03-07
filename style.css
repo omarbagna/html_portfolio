@@ -207,9 +207,32 @@ body {
 	align-items: flex-start;
 }
 
+.widget-tags_right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
+	gap: 0.4rem;
+}
+
+.widget-tags_left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0.4rem;
+}
+
 .widget-tag {
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.widget-tag_reverse {
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 0.4rem;
 }
