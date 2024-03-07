@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+	--nav-bg: #ede9e2;
+}
+
+* {
+	font-family: 'Red Hat Display', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(./images/macos-big-sur.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #3e3232;
+}
+
+.nav_bar {
+	width: 100%;
+	background-color: var(--nav-bg);
+	padding: 3px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 500;
+	-webkit-box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+	box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+}
+
+.nav_bar-left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav_bar-left_logo {
+	object-fit: contain;
+	height: 15px;
+}
+
+.nav_bar-left_buttons {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav_bar-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav_bar-right_icons {
+	font-size: 20px;
+}
