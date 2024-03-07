@@ -113,24 +113,66 @@
 					<div class="widget-tags_left">
 						<div class="widget-tag_reverse">
 							<span class="bar alt-white"></span>
-							<span class="widget-text_sm">Fullstack Developer</span>
+							<span class="widget-text_xs">Fullstack Developer</span>
 						</div>
 						<div class="widget-tag_reverse">
 							<span class="bar alt-white"></span>
-							<span class="widget-text_sm">UI/UX Designer</span>
+							<span class="widget-text_xs">UI/UX Designer</span>
 						</div>
 						<div class="widget-tag_reverse">
 							<span class="bar alt-white"></span>
-							<span class="widget-text_sm">Tailwind Warrior</span>
+							<span class="widget-text_xs">Tailwind Warrior</span>
 						</div>
 						<div class="widget-tag_reverse">
 							<span class="bar alt-white"></span>
-							<span class="widget-text_sm">Coffee Sipper</span>
+							<span class="widget-text_xs">Coffee Sipper</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="home_content-icons"></div>
 		</div>
+
+		<div class="bottom_nav">
+			<a href="#" class="bottom_nav-icon_container">
+				<i
+					class="bx bx-home-alt"
+					data-bs-toggle="tooltip"
+					data-bs-placement="bottom"
+					data-bs-title="Home"
+				></i>
+			</a>
+			<a href="#" class="bottom_nav-icon_container">
+				<i
+					class="bx bx-phone-call"
+					data-bs-toggle="tooltip"
+					data-bs-placement="bottom"
+					data-bs-title="Contact me"
+				></i>
+			</a>
+			<a href="#" class="bottom_nav-icon_container">
+				<i
+					class="bx bx-coin-stack"
+					data-bs-toggle="tooltip"
+					data-bs-placement="bottom"
+					data-bs-title="Tech stack"
+				></i>
+			</a>
+		</div>
 	</body>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"
+	></script>
+
+	<script>
+		const tooltipTriggerList = document.querySelectorAll(
+			'[data-bs-toggle="tooltip"]'
+		);
+		const tooltipList = [...tooltipTriggerList].map(
+			(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+		);
+	</script>
 </html>
