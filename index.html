@@ -49,8 +49,8 @@
 				<i class="bx bxl-github nav_bar-right_icons"></i>
 				<i class="bx bxl-linkedin nav_bar-right_icons"></i>
 				<i class="bx bxl-instagram-alt nav_bar-right_icons"></i>
-				<span class="date_time">Fri 8 Mar</span>
-				<span class="date_time">11:11PM</span>
+				<span class="date_time" id="date_value"></span>
+				<span class="date_time" id="time_value"></span>
 			</div>
 		</div>
 
@@ -174,5 +174,37 @@
 		const tooltipList = [...tooltipTriggerList].map(
 			(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 		);
+
+		// Get the current date and time
+		function updateTime() {
+			var today = new Date();
+
+			// Extract day, date, year, hours, and minutes
+			var day = today.getDay();
+			var dayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+			var date = today.getDate();
+			var year = today.getFullYear();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+
+			// Format hours to 12-hour format with AM/PM
+			var ampm = hours >= 12 ? 'PM' : 'AM';
+			hours = hours % 12 || 12; // Convert 24-hour to 12-hour format (or 12 if 0)
+
+			// Format minutes with leading zero for single digits
+			minutes = minutes < 10 ? '0' + minutes : minutes;
+
+			// Build the formatted date string
+			var formattedDate = dayList[day] + ' ' + date + ' ' + year;
+
+			// Build the formatted time string
+			var formattedTime = hours + ':' + minutes + ' ' + ampm;
+
+			// Update the span element with the id "date_time"
+			document.getElementById('date_value').innerHTML = formattedDate;
+			document.getElementById('time_value').innerHTML = formattedTime;
+		}
+
+		setInterval(updateTime, 1000);
 	</script>
 </html>
